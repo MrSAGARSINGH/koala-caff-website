@@ -1,730 +1,865 @@
+
 .featured-menu {
-
   padding: 120px 0;
-
   background: #faf7f2;
-
   position: relative;
-
   overflow: hidden;
 
   .container {
-
     width: min(92%, 1400px);
-
     margin: auto;
-
   }
 
-  /* ======================================
-                HEADER
-  ====================================== */
+  /* ==============================
+     HEADER
+  ============================== */
 
   &__header {
-
     text-align: center;
-
     max-width: 760px;
-
     margin: 0 auto 70px;
-
   }
 
   &__subtitle {
-
     display: inline-flex;
-
     align-items: center;
-
     gap: 14px;
-
     color: #b88339;
-
     font-size: 15px;
-
     font-weight: 700;
-
     letter-spacing: 4px;
-
     text-transform: uppercase;
-
     margin-bottom: 22px;
 
-    &::before {
-
-      content: "";
-
-      width: 60px;
-
-      height: 2px;
-
-      background: #b88339;
-
-    }
-
+    &::before,
     &::after {
-
       content: "";
-
       width: 60px;
-
       height: 2px;
-
       background: #b88339;
-
     }
-
   }
 
   &__title {
-
     font-size: clamp(42px, 5vw, 68px);
-
     line-height: 1.1;
-
     color: #222;
-
     font-weight: 800;
-
     margin-bottom: 26px;
-
   }
 
   &__description {
-
     color: #666;
-
     font-size: 18px;
-
     line-height: 1.9;
-
   }
 
-  /* ======================================
-                  TABS
-  ====================================== */
+  /* ==============================
+     TABS
+  ============================== */
 
   &__tabs {
-
     display: flex;
-
     justify-content: center;
-
     flex-wrap: wrap;
-
     gap: 18px;
-
     margin-bottom: 70px;
-
   }
 
   &__tab {
-
     padding: 15px 34px;
-
     border-radius: 999px;
-
-    border: 1px solid rgba(0, 0, 0, .08);
-
+    border: 1px solid rgba(0, 0, 0, 0.08);
     background: white;
-
     color: #444;
-
     font-size: 15px;
-
     font-weight: 600;
-
     cursor: pointer;
-
-    transition: .35s;
+    transition: 0.35s;
 
     &:hover {
-
       transform: translateY(-4px);
-
       color: white;
-
-      background: #6F4E37;
-
-      border-color: #6F4E37;
-
+      background: #6f4e37;
+      border-color: #6f4e37;
     }
 
     &.active {
-
-      background: #6F4E37;
-
+      background: #6f4e37;
       color: white;
-
-      border-color: #6F4E37;
-
-      box-shadow: 0 15px 35px rgba(111, 78, 55, .25);
-
+      border-color: #6f4e37;
+      box-shadow: 0 15px 35px rgba(111, 78, 55, 0.25);
     }
-
   }
 
-  /* ======================================
-                GRID
-  ====================================== */
+  /* ==============================
+     MENU GRID
+  ============================== */
 
   &__grid {
-
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 30px;
-
   }
 
-  /* ======================================
-                CARD
-  ====================================== */
+  /* ==============================
+     MENU CARD
+  ============================== */
 
   &__card {
-
     background: #fff;
-
     border-radius: 28px;
-
     overflow: hidden;
-
-    transition: .45s ease;
-
-    box-shadow:
-      0 12px 35px rgba(0, 0, 0, .06);
-
+    transition: 0.45s ease;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
     position: relative;
-
     display: flex;
-
     flex-direction: column;
-
     height: 100%;
 
     &:hover {
-
       transform: translateY(-12px);
-
-      box-shadow:
-        0 30px 70px rgba(0, 0, 0, .14);
-
+      box-shadow: 0 30px 70px rgba(0, 0, 0, 0.14);
     }
 
     &:hover .featured-menu__image img {
-
       transform: scale(1.08);
-
     }
-
   }
 
-  /* ======================================
-                IMAGE
-  ====================================== */
+  /* ==============================
+     MENU IMAGE
+  ============================== */
 
   &__image {
-
     width: 100%;
-
     height: 260px;
-
     overflow: hidden;
-
     position: relative;
-
-    background: #F5F5F5;
+    background: #f5f5f5;
 
     img {
-
       width: 100%;
-
       height: 100%;
-
       object-fit: cover;
-
-      transition: .6s;
-
+      transition: 0.6s;
       display: block;
-
     }
 
     &::after {
-
       content: "";
-
       position: absolute;
-
       inset: 0;
-
-      background: linear-gradient(to top,
-          rgba(0, 0, 0, .18),
-          transparent);
-
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.18),
+        transparent
+      );
       opacity: 0;
-
-      transition: .35s;
-
+      transition: 0.35s;
     }
-
   }
 
   &__card:hover .featured-menu__image::after {
-
     opacity: 1;
-
   }
 
-  /* ======================================
-                CONTENT
-  ====================================== */
+  /* ==============================
+     CONTENT
+  ============================== */
 
   &__content {
-
     flex: 1;
-
     display: flex;
-
     flex-direction: column;
-
     padding: 28px;
-
   }
 
   &__name {
-
     font-size: 26px;
-
     color: #222;
-
     font-weight: 700;
-
     margin-bottom: 12px;
-
   }
 
   &__text {
-
     color: #666;
-
     line-height: 1.8;
-
     font-size: 15px;
-
     margin-bottom: 28px;
-
     flex: 1;
-
   }
 
-  /* ======================================
-                PRICE + BUTTON
-  ====================================== */
-
   &__bottom {
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     gap: 15px;
-
   }
 
   &__price {
-
-    color: #6F4E37;
-
+    color: #6f4e37;
     font-size: 24px;
-
     font-weight: 700;
-
   }
 
-
-  /* ======================================
-            DECORATIVE SHAPES
-  ====================================== */
+  /* ==============================
+     DECORATIVE SHAPES
+  ============================== */
 
   &::before {
-
     content: "";
-
     position: absolute;
-
     top: -180px;
-
     right: -180px;
-
     width: 420px;
-
     height: 420px;
-
     border-radius: 50%;
-
-    background: rgba(217, 176, 111, .08);
-
+    background: rgba(217, 176, 111, 0.08);
     filter: blur(12px);
-
     z-index: 0;
-
   }
 
   &::after {
-
     content: "";
-
     position: absolute;
-
     bottom: -160px;
-
     left: -160px;
-
     width: 320px;
-
     height: 320px;
-
     border-radius: 50%;
-
-    background: rgba(111, 78, 55, .05);
-
+    background: rgba(111, 78, 55, 0.05);
     filter: blur(10px);
-
     z-index: 0;
-
   }
 
   .container {
-
     position: relative;
-
     z-index: 2;
-
   }
-
 }
 
-/* =====================================================
-                TABLET
-===================================================== */
+/* ==============================
+   TABLET
+============================== */
 
-@media(max-width:1100px) {
-
+@media (max-width: 1100px) {
   .featured-menu {
-
     padding: 100px 0;
 
     &__grid {
-
       grid-template-columns: repeat(2, minmax(280px, 1fr));
-
       gap: 26px;
-
     }
 
     &__title {
-
       font-size: 52px;
-
     }
 
     &__description {
-
       max-width: 700px;
-
       margin: auto;
-
     }
-
   }
-
 }
 
-/* =====================================================
-                MOBILE
-===================================================== */
+/* ==============================
+   MOBILE
+============================== */
 
-@media(max-width:768px) {
-
+@media (max-width: 768px) {
   .featured-menu {
-
     padding: 80px 0;
 
     &__header {
-
       margin-bottom: 50px;
-
     }
 
     &__subtitle {
-
       font-size: 13px;
-
       letter-spacing: 3px;
-
     }
 
     &__subtitle::before,
     &__subtitle::after {
-
       width: 36px;
-
     }
 
     &__title {
-
       font-size: 38px;
-
     }
 
     &__description {
-
       font-size: 16px;
-
     }
 
     &__tabs {
-
       gap: 10px;
-
       justify-content: flex-start;
-
       overflow-x: auto;
-
       flex-wrap: nowrap;
-
       padding-bottom: 8px;
-
       scrollbar-width: none;
 
       &::-webkit-scrollbar {
-
         display: none;
-
       }
-
     }
 
     &__tab {
-
       flex-shrink: 0;
-
       min-width: 110px;
-
       height: 48px;
-
       padding: 0 22px;
-
     }
 
     &__grid {
-
       grid-template-columns: 1fr;
-
       gap: 22px;
-
     }
 
     &__card {
-
       max-width: 420px;
-
       width: 100%;
-
       margin-inline: auto;
-
     }
 
-
     &__image {
-
       height: 250px;
-
     }
 
     &__content {
-
       padding: 24px;
-
     }
 
     &__name {
-
       font-size: 24px;
-
     }
 
     &__bottom {
-
       flex-direction: column;
-
       align-items: flex-start;
-
       gap: 18px;
-
     }
 
     &__button {
-
       width: 100%;
-
       height: 52px;
-
       font-size: 15px;
-
     }
 
     &__view {
-
       width: 100%;
-
     }
-
   }
-
 }
 
-/* =====================================================
-            SMALL MOBILE
-===================================================== */
+/* ==============================
+   SMALL MOBILE
+============================== */
 
-@media(max-width:480px) {
-
+@media (max-width: 480px) {
   .featured-menu {
-
     &__title {
-
       font-size: 32px;
-
     }
 
     &__description {
-
       font-size: 15px;
-
     }
 
     &__image {
-
       height: 220px;
-
     }
 
     &__content {
-
       padding: 20px;
-
     }
 
     &__name {
-
       font-size: 22px;
-
     }
 
     &__price {
-
       font-size: 22px;
-
     }
-
   }
-
 }
 
-/* =====================================================
-            LARGE DESKTOP
-===================================================== */
+/* ==============================
+   LARGE DESKTOP
+============================== */
 
-@media(min-width:1700px) {
-
+@media (min-width: 1700px) {
   .featured-menu {
-
     &__grid {
-
       gap: 40px;
-
     }
 
     &__image {
-
       height: 320px;
-
     }
 
     &__title {
-
       font-size: 72px;
-
     }
-
   }
-
 }
 
-@media(max-width:400px) {
-
+@media (max-width: 400px) {
   .featured-menu {
-
     &__title {
-
       font-size: 28px;
-
     }
 
     &__description {
-
       font-size: 14px;
-
     }
 
     &__tab {
-
       min-width: 96px;
-
       height: 44px;
-
       font-size: 13px;
-
     }
 
     &__image {
-
       height: 190px;
-
     }
 
     &__content {
-
       padding: 18px;
-
     }
 
     &__name {
-
       font-size: 20px;
-
     }
 
     &__price {
-
       font-size: 20px;
-
     }
 
     &__button {
-
       width: 100%;
-
       height: 50px;
-
       font-size: 14px;
-
     }
+  }
+}
 
+/* ==========================================
+   PREMIUM PDF MENU FOOTER
+========================================== */
+
+.featured-menu {
+  &__footer {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 78px;
+    padding: clamp(45px, 6vw, 82px) 24px;
+    border-radius: 26px;
+
+    background:
+      radial-gradient(
+        circle at 10% 20%,
+        rgba(222, 175, 105, 0.15),
+        transparent 36%
+      ),
+      radial-gradient(
+        circle at 90% 90%,
+        rgba(255, 255, 255, 0.06),
+        transparent 38%
+      ),
+      #352317;
+
+    box-shadow: 0 24px 65px rgba(63, 38, 22, 0.16);
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 12px;
+      border: 1px solid rgba(232, 193, 138, 0.25);
+      border-radius: 17px;
+      pointer-events: none;
+    }
   }
 
+  &__footer-eyebrow {
+    color: #ddb986;
+    font-size: 11px;
+    letter-spacing: 3.2px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  &__footer-title {
+    color: #fffaf2;
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: clamp(30px, 4.1vw, 48px);
+    line-height: 1.2;
+    margin: 0 0 16px;
+  }
+
+  &__footer-text {
+    color: #e3d3c3;
+    max-width: 460px;
+    line-height: 1.75;
+    font-size: 15px;
+    margin: 0 0 30px;
+  }
+
+  /* ==============================
+     PREMIUM BUTTON
+  ============================== */
+
+  &__pdf-btn {
+    position: relative;
+    overflow: hidden;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    min-height: 58px;
+    padding: 17px 30px;
+
+    color: #332214;
+    background: #e9c997;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+
+    cursor: pointer;
+
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease,
+      background 0.3s ease;
+
+    /* Shimmer hover effect */
+    &::before {
+      content: "";
+      position: absolute;
+      top: -10%;
+      left: -70%;
+      width: 48%;
+      height: 120%;
+
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.5),
+        transparent
+      );
+
+      transform: skewX(-24deg);
+      transition: left 0.6s ease;
+      pointer-events: none;
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+
+    &:hover:not(:disabled) {
+      transform: translateY(-4px);
+      background: #f4d9ad;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.23);
+
+      &::before {
+        left: 150%;
+      }
+
+      .featured-menu__pdf-arrow {
+        transform: translate(3px, -3px);
+      }
+    }
+
+    &:active:not(:disabled) {
+      transform: scale(0.98);
+    }
+
+    &:disabled {
+      cursor: progress;
+      opacity: 0.85;
+    }
+
+    &:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 5px;
+    }
+  }
+
+  &__pdf-arrow {
+    font-size: 22px;
+    line-height: 1;
+    transition: transform 0.3s ease;
+  }
+
+  &__pdf-note {
+    margin-top: 19px;
+    color: #bba58e;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+}
+
+/* ==========================================
+   PDF OPENING SCREEN
+========================================== */
+
+.menu-reveal-page {
+  margin: 0;
+  background: #2b1b12;
+}
+
+.menu-reveal {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 32px 20px;
+  text-align: center;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  color: #fffaf2;
+
+  background:
+    radial-gradient(
+      circle at 50% 38%,
+      rgba(170, 113, 60, 0.22),
+      transparent 48%
+    ),
+    #2b1b12;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(228, 189, 132, 0.25);
+    border-radius: 14px;
+    pointer-events: none;
+  }
+
+  /* Floating decorative icon */
+
+  &__ornament {
+    width: 96px;
+    height: 96px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 34px;
+    border: 1px solid rgba(233, 201, 151, 0.65);
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 12px rgba(233, 201, 151, 0.06);
+
+    animation: menuRevealFloat 1.6s ease-in-out infinite;
+  }
+
+  &__book {
+    color: #e9c997;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 52px;
+    line-height: 1;
+  }
+
+  &__eyebrow {
+    color: #e9c997;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+
+    animation: menuRevealFade 0.75s both;
+  }
+
+  &__title {
+    max-width: 720px;
+    color: #fffaf2;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 5vw, 60px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0 0 17px;
+
+    animation: menuRevealFade 0.75s 0.12s both;
+  }
+
+  &__description {
+    margin: 0;
+    color: #e2cdb8;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+
+    animation: menuRevealFade 0.75s 0.2s both;
+  }
+
+  /* Loading progress */
+
+  &__progress {
+    width: min(210px, 70vw);
+    height: 3px;
+    margin-top: 34px;
+
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 99px;
+    overflow: hidden;
+
+    span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #e9c997;
+
+      transform: scaleX(0);
+      transform-origin: left;
+
+      animation: menuRevealLoad 1.65s linear forwards;
+    }
+  }
+
+  &__loading {
+    font-family: Arial, sans-serif;
+    color: #cbb096;
+    margin-top: 17px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+  }
+
+  &__fallback {
+    position: absolute;
+    bottom: 40px;
+    color: #e9c997;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    text-underline-offset: 4px;
+  }
+}
+
+/* ==========================================
+   REVEAL ANIMATIONS
+========================================== */
+
+@keyframes menuRevealFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(8deg);
+  }
+}
+
+@keyframes menuRevealFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes menuRevealLoad {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ==========================================
+   PDF FOOTER MOBILE
+========================================== */
+
+@media (max-width: 576px) {
+  .featured-menu {
+    &__footer {
+      margin-top: 45px;
+      padding: 50px 20px;
+      border-radius: 20px;
+
+      &::before {
+        inset: 9px;
+        border-radius: 14px;
+      }
+    }
+
+    &__footer-title {
+      font-size: 30px;
+    }
+
+    &__footer-text {
+      font-size: 14px;
+    }
+
+    &__pdf-btn {
+      width: 100%;
+      max-width: 295px;
+      padding: 16px;
+    }
+
+    &__pdf-note {
+      font-size: 9px;
+    }
+  }
+}
+
+/* ==========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .featured-menu__pdf-btn,
+  .featured-menu__pdf-btn::before,
+  .featured-menu__pdf-arrow,
+  .menu-reveal__ornament,
+  .menu-reveal__eyebrow,
+  .menu-reveal__title,
+  .menu-reveal__description,
+  .menu-reveal__progress span {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .menu-reveal__progress span {
+    transform: scaleX(1);
+  }
 }
