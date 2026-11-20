@@ -7,6 +7,7 @@ import FeaturedMenu from "./components/home/FeaturedMenu/FeaturedMenu";
 import Gallery from "./components/home/Gallery/Gallery";
 import WhyChooseUs from "./components/home/WhyChooseUs/WhyChooseUs";
 import Contact from "./components/home/Contact/Contact";
+import FloatingSocial from "./components/FloatingSocial/FloatingSocial";
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
       </main>
 
       <Footer />
+
+      <FloatingSocial />
 
     </>
   );

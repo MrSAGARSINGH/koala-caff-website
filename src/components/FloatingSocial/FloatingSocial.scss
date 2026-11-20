@@ -1,0 +1,148 @@
+
+.floating-social {
+  position: fixed;
+  right: 24px;
+  bottom: 30px;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+
+  &__link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    color: #fff;
+    text-decoration: none;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px) scale(1.08);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+
+      .floating-social__tooltip {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+      }
+    }
+
+    &:focus-visible {
+      outline: 3px solid #d9ad62;
+      outline-offset: 4px;
+    }
+
+    &.instagram {
+      background: linear-gradient(
+        135deg,
+        #feda75 0%,
+        #fa7e1e 25%,
+        #d62976 55%,
+        #962fbf 80%,
+        #4f5bd5 100%
+      );
+    }
+
+    &.whatsapp {
+      background: #25d366;
+    }
+
+    &.phone {
+      background: linear-gradient(
+        135deg,
+        #9b7b39,
+        #685021
+      );
+    }
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 27px;
+    line-height: 1;
+  }
+
+  &__tooltip {
+    position: absolute;
+    right: calc(100% + 14px);
+
+    padding: 9px 14px;
+
+    color: #fff;
+    background: #1c1c1c;
+
+    border: 1px solid rgba(217, 173, 98, 0.3);
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(8px);
+
+    pointer-events: none;
+
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      visibility 0.25s ease;
+  }
+
+  @media (max-width: 768px) {
+    right: 14px;
+    bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+    gap: 11px;
+
+    &__link {
+      width: 50px;
+      height: 50px;
+    }
+
+    &__icon {
+      font-size: 23px;
+    }
+
+    &__tooltip {
+      display: none;
+    }
+  }
+
+  @media (max-width: 380px) {
+    right: 10px;
+
+    &__link {
+      width: 46px;
+      height: 46px;
+    }
+
+    &__icon {
+      font-size: 21px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &__link,
+    &__tooltip {
+      transition: none;
+    }
+  }
+}
